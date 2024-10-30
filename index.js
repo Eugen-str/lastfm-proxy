@@ -1,7 +1,10 @@
 const express = require('express');
 require('dotenv').config({ path: './key.env' });
+const cors = require('cors');
 const app = express();
 const port = process.env.port || 3000;
+
+app.use(cors());
 
 const API_KEY = process.env.LASTFM_API_KEY;
 
